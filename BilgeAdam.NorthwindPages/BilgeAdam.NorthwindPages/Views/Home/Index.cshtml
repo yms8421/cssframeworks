@@ -1,5 +1,26 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<ProductViewModel>
 
-Ana Sayfa
+<h2>Ana Sayfa</h2>
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-4">
+            <div class="card mb-4">
+                <img src="https://fakeimg.pl/180x200/ffdd55" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="card-text">@product.Text</p>
+                    <a href="@Url.Action("Detail", "Product", new { id = product.Id })" class="btn btn-primary">Detay</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="alert alert-primary" role="alert">
+    A simple primary alert—check it out!
+</div>
+
+<div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+</div>

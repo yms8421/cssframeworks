@@ -12,7 +12,16 @@ namespace BilgeAdam.NorthwindPages.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var products = new List<ProductViewModel>
+            {
+                new ProductViewModel { Id = 1, Name = "Chai", Price = 39.82M, Text = "Meyve Suyu" },
+                new ProductViewModel { Id = 2, Name = "Chang", Price = 17.83M, Text = "Meyve Nektarı" },
+                new ProductViewModel { Id = 3, Name = "Anyseed Syrup", Price = 23.65M, Text = "Şekerleme Türevi" },
+                new ProductViewModel { Id = 4, Name = "Ikura", Price = 25.56M, Text = "Okyanus Balığı" },
+                new ProductViewModel { Id = 5, Name = "Miku Tobe Mishu", Price = 6.44M, Text = "Kurutulmuş Et" },
+                new ProductViewModel { Id = 6, Name = "Yarda", Price = 11.80M, Text = "Günlük Süt" }
+            };
+            return View(products);
         }
 
         public IActionResult About()
@@ -26,11 +35,6 @@ namespace BilgeAdam.NorthwindPages.Controllers
         {
             ViewData["Message"] = "Your contact page.";
 
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
             return View();
         }
 

@@ -4,8 +4,49 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bilge Adam .NET Core</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/sidebar.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
 </head>
 <body>
-    @RenderBody()
+    <div class="fixed-top d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-primary border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto text-white font-weight-normal">BilgeAdam IKEA</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-white" href="@Url.Action("Index", "Home")">Ana Sayfa</a>
+            <a class="p-2 text-white" href="@Url.Action("Index", "Product")">Ürünler</a>
+            <a class="p-2 text-white" href="@Url.Action("About", "Home")">Hakkımızda</a>
+            <a class="p-2 text-white" href="@Url.Action("Contact", "Home")">İletişim</a>
+        </nav>
+        <a class="btn btn-outline-light" href="#">Kayıt Ol</a>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="col-md-2 d-none d-md-block bg-light sidebar">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Kategoriler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Üyelik</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">İstatistik</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bilgi İşlem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ayarlar</a>
+                </li>
+            </ul>
+
+            <main class="col-md-9 ml-sm-auto col-lg-10 px-4 content">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
 </body>
 </html>
