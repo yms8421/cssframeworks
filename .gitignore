@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BilgeAdam.NorthwindPages/.vs
+/.vs
+/BilgeAdam.NorthwindPages/BilgeAdam.NorthwindPages/bin/Debug/netcoreapp2.1
+/BilgeAdam.NorthwindPages/BilgeAdam.NorthwindPages/obj
